@@ -1,0 +1,196 @@
+.header, .header__navbar{
+    box-shadow: 0 0 8px black;
+    &__toggle{
+        display: none;
+    }
+    // Responsive Menu
+    &__nav{
+        display: none;
+        top: 0px;
+        left: 0px;
+        position: fixed;
+        text-align: left;
+    }
+    &__nav__item{
+        list-style: none;
+        padding-top: 30px;
+    }
+    &__nav__item > a{
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.04em;
+        color: #333333;
+        background: transparent;
+        &:hover{
+            border: 1px solid red;
+            border-radius: 5px;
+            padding: 10px 15px;
+            background-color: red;
+            color: white;
+        }
+    }
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    &__logo{
+        text-decoration: none;
+        color: #000;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0.04em;
+        text-align: left;
+    }
+
+    &__svg__svg{
+        margin-right: 20px;
+    }
+
+    &__svg__svg2{
+        &:hover{
+            Path{
+            Fill:red
+            }
+            border: red;
+        }
+    }
+
+    &__svg__svg1{
+        &:hover{
+            Path{
+            Fill:rgba(0, 0, 255, 0.432)
+            }
+            border: rgba(0, 0, 255, 0.432);
+        }
+    }
+
+    &__svg__svg3{
+        &:hover{
+            Path{
+            Fill: yellow;
+            }
+            border: yellow;
+        }
+    }
+}
+
+
+
+// Media started
+@media screen and (max-width: 768px){
+    .header__navbar{
+        margin-top: 90px;
+        display: none;
+        top: -90px;
+        left: 0px;
+        position: fixed;
+        text-align: left;
+        background-color: white;
+        z-index: 1px;
+        width: 100%;
+        height: 277px;
+        &--active{
+            display: flex;
+        }
+        &__nav{
+            display: block;
+            padding-top: 50px;
+        }
+        &__nav__item{
+            list-style: none;
+        }
+        &__nav__item > a{
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.04em;
+            color: #333333;
+            background: transparent;
+        }
+    }
+
+    .header{
+        box-shadow: 0 0 0px white;
+        z-index: -1px;
+        &__toggle{
+            position: relative;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            width: 30px;
+            height: 25px;
+            &::after, &::before{
+                content: "";
+                position: absolute;
+            }
+            &::after{
+                top: 0px;
+            }
+            &::before{
+                bottom: 0px;
+            }
+
+            &--active{
+                &::before{
+                    bottom: 50%;
+                    transform: translateY(50%) rotateZ(-45deg);
+                }
+                &::after{
+                    top: 50%;
+                    transform: translateY(-50%) rotateZ(45deg);
+                }
+                & > span{
+                    display: none;
+                }
+            }
+            &::after, &::before, & > span{
+                width: 100%;
+                height: 3px;
+                background-color: black;
+                border-radius: 3px;
+            }
+        }
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        padding-top: 22px;
+        padding-bottom: 22px;
+        &__logo{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 16px;
+            letter-spacing: 0.04em;
+            text-align: left;
+            margin-right: auto;
+        }
+    
+        // Responsive Menu
+        
+        &__svg > svg{
+            margin-right: 20px;
+            &:hover{
+                background-color: red;
+            }
+        }
+    }
+}
