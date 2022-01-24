@@ -1,16 +1,4 @@
-// // Hamburger Menu
-// const menuBtn = document.querySelector('.menu-btn');
-// let menuOpen = false;
-// menuBtn.addEventListener('click',() =>{
-//     if(!menuOpen) {
-//         menuBtn.classList.add('open');
-//         menuOpen = true
-//     }else{
-//         menuBtn.classList.remove('open');
-//         menuOpen = false;
-//     }
-// });
-
+// Hamburger Menu
 var toggle = document.querySelector("#toggle")
 var navbar = document.querySelector("#navbar")
 toggle.addEventListener("click", ()=>{
@@ -22,5 +10,25 @@ toggle.addEventListener("click", ()=>{
         navbar.classList.add("header__navbar--active")
     }
 })
+
+// Main right count 
+const plusButton = document.getElementById("main__plus__btn");
+const minusButton = document.getElementById("main__minus__btn");
+const resultElement = document.querySelector(".main__result");
+
+
+let productCount = 1;
+plusButton.addEventListener("click",()=>{
+    productCount++;
+    resultElement.textContent = productCount;
+})
+minusButton.addEventListener("click",()=>{
+    productCount--;
+    if(productCount < 1){
+        productCount = 1;
+    }
+    resultElement.textContent = productCount;
+})
+
 
 
