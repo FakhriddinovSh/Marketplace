@@ -30,5 +30,9 @@ minusButton.addEventListener("click",()=>{
     resultElement.textContent = productCount;
 })
 
+// Changing background image
+function imgSlider(anything){
+    document.querySelector('.imgSlider').src = anything;
+}
 
 
