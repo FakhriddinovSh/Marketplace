@@ -1,0 +1,91 @@
+.images{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 100px;
+    &:hover{
+        cursor: pointer;
+    }
+    &__left{
+        position: relative;
+    }
+
+
+    &__overlay{
+        display: block;
+        position: absolute;
+        background: #333;
+        opacity: 0;
+        width: 685px;
+        height: 689px;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    &__overlay__copy{
+        margin-bottom: 80px;
+        margin-left: 630px;
+        padding-top: 30px;
+        padding-right: 30px;
+    }
+    &__overlay__basket{
+        margin-left: 300px;
+        margin-top: 240px;
+        padding-bottom: 300px;
+    }
+    &__overlay__basket > svg{
+        margin-left: 40px;
+    }
+    &__overlay__basket > p{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.04em;
+        text-align: left;
+        color: white;
+    }
+    &__overlay__like{
+        text-align: center;
+        justify-content: space-between;
+        display: flex;
+        margin-left: 340px;
+        margin-top: -50px;
+    }
+    &__overlay__like > svg{
+        &:hover{
+            path{
+                fill:red;
+            }
+        }
+    }
+    &__overlay__like > p{
+        margin-right: 290px;
+        margin-top: 2px;
+    }
+    &__right{
+        display: block;
+    }
+    &__top, &__bottom{
+        display: flex;
+    }
+    &__top > img{
+        width: 335px;
+        height: 336px;
+        margin-right: 2px;
+        margin-left: 10px;
+    }
+    &__bottom > img{
+        width: 335px;
+        height: 336px;
+        margin-top: 10px;
+        margin-right: 2px;
+        margin-left: 10px;
+    }
+    &__top{
+        margin-left: 10px;
+    }
+
+}
