@@ -71,18 +71,21 @@
     &__top, &__bottom{
         display: flex;
     }
-    &__top > img{
+    &__top__1 > img{
         width: 335px;
         height: 336px;
-        margin-right: 2px;
+        margin-right: 10px;
+        margin-left: 0px;
+    }
+    &__bottom{
         margin-left: 10px;
     }
-    &__bottom > img{
+    &__bottom__1 > img, &__bottom__2 > img{
         width: 335px;
-        height: 336px;
-        margin-top: 10px;
-        margin-right: 2px;
-        margin-left: 10px;
+        height: 345px;
+    }
+    &__bottom__1 > img{
+        margin-right: 10px;
     }
     &__top{
         margin-left: 10px;
@@ -108,12 +111,14 @@
         justify-content: space-between;
         width: 100%;
         margin-bottom: 100px;
+        z-index: 1px;
         &:hover{
             cursor: pointer;
         }
         &__left{
             position: relative;
             margin-top: 20px;
+            z-index: -1px;
         }
         &__left > img{
             width: 430px;
